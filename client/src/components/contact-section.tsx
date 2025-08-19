@@ -65,16 +65,15 @@ export function ContactSection() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "alex.johnson@email.com" },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-    { icon: MapPin, label: "Location", value: "San Francisco, CA" },
+    { icon: Mail, label: "Email", value: "dhruvmunjpara11@gmail.com" },
+    { icon: Phone, label: "Phone", value: "7383652958" },
+    { icon: MapPin, label: "Location", value: "Ahmedabad" },
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: "#", label: "GitHub" },
-    { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-    { icon: FaTwitter, href: "#", label: "Twitter" },
-    { icon: FaInstagram, href: "#", label: "Instagram" },
+    { icon: FaGithub, href: "https://github.com/dhruvmu", label: "GitHub" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/dhruv-munjpara-76ab0a345/", label: "LinkedIn" },
+    { icon: FaInstagram, href: "https://instagram.com/dhruvmunjpara_", label: "Instagram" },
   ];
 
   return (
@@ -89,7 +88,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
           <div className="space-y-8">
             <div className="glass-card p-8 rounded-3xl">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>

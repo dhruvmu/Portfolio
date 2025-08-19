@@ -38,29 +38,35 @@ export function HeroSection() {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const downloadCV = () => {
+    const googleDriveUrl = "https://drive.google.com/file/d/1zyBaa__CH73altERkbfX02syyIpXcnwm/view?usp=drive_link";
+    window.open(googleDriveUrl, "_blank");
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 gradient-bg" />
       <ParticlesBackground />
       
-      <div className="content-overlay text-center px-6 max-w-4xl mx-auto text-white">
+      <div className="content-overlay text-center px-6 max-w-4xl mx-auto text-foreground">
         <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-float">
-            Hi, I'm <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Alex Johnson</span>
+          <h1 className="hero-title font-bold mb-6 animate-float">
+            Hi, I'm <span className="text-gradient">Dhruv Munjpara</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 typing-animation min-h-[2rem]">
+          <p className="hero-subtitle typing-animation min-h-[2rem]">
             {typedText}
           </p>
-          <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
+          <p className="hero-paragraph mb-10 max-w-2xl mx-auto text-muted-foreground">
             Passionate about creating digital experiences that make a difference. 
             I build modern web applications using cutting-edge technologies.
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="hero-actions flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             size="lg"
-            className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold hover:bg-white/30 transition-all duration-300 hover:scale-105"
+            onClick={downloadCV}
+            className="px-8 py-4 btn-gradient text-white font-semibold shadow-lg transition-transform duration-300 hover:scale-105"
           >
             <Download className="mr-2 h-5 w-5" />
             Download CV
@@ -69,7 +75,7 @@ export function HeroSection() {
             size="lg"
             variant="outline"
             onClick={scrollToContact}
-            className="px-8 py-4 border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-all duration-300 hover:scale-105"
+            className="px-8 py-4 border-2 border-primary text-foreground font-semibold hover:bg-secondary transition-transform duration-300 hover:scale-105"
           >
             <Mail className="mr-2 h-5 w-5" />
             Get In Touch
@@ -78,7 +84,7 @@ export function HeroSection() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="text-white/70 h-8 w-8" />
+        <ChevronDown className="text-muted-foreground h-8 w-8" />
       </div>
     </section>
   );

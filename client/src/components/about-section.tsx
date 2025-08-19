@@ -24,36 +24,29 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="glass-card p-8 rounded-3xl">
             {/* Profile image placeholder with modern frame */}
-            <div className="w-80 h-80 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary to-accent p-1">
+            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary to-accent p-1">
               <div className="w-full h-full rounded-full bg-muted flex items-center justify-center">
                 <User className="h-24 w-24 text-muted-foreground" />
               </div>
             </div>
             
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-2">Alex Johnson</h3>
+              <h3 className="text-2xl font-bold mb-2">Dhruv Munjpara</h3>
               <p className="text-accent font-semibold mb-4">Full Stack Developer</p>
               <div className="flex justify-center space-x-4">
                 <a 
-                  href="#" 
+                  href="https://github.com/dhruvmu" 
                   className="text-2xl hover:text-accent transition-colors"
                   aria-label="GitHub"
                 >
                   <FaGithub />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/dhruv-munjpara-76ab0a345/" 
                   className="text-2xl hover:text-accent transition-colors"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin />
-                </a>
-                <a 
-                  href="#" 
-                  className="text-2xl hover:text-accent transition-colors"
-                  aria-label="Twitter"
-                >
-                  <FaTwitter />
                 </a>
               </div>
             </div>
@@ -76,7 +69,7 @@ export function AboutSection() {
 
             <div className="glass-card p-8 rounded-3xl">
               <h3 className="text-2xl font-bold mb-4 text-accent">What I Love</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
                 {highlights.map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <item.icon className="h-5 w-5 text-primary" />

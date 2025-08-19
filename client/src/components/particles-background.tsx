@@ -48,6 +48,10 @@ export function ParticlesBackground() {
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      // Read theme-aware colors from CSS variables
+      const computed = getComputedStyle(document.documentElement);
+      const foreground = computed.getPropertyValue("--foreground").trim() || "#ffffff";
+
       // Update and draw particles
       particles.forEach((particle, i) => {
         // Update position
@@ -60,7 +64,7 @@ export function ParticlesBackground() {
 
         // Draw particle
         ctx.globalAlpha = particle.opacity;
-        ctx.fillStyle = "white";
+        ctx.fillStyle = foreground;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
@@ -75,7 +79,7 @@ export function ParticlesBackground() {
             if (distance < maxDistance) {
               const opacity = (maxDistance - distance) / maxDistance * 0.4;
               ctx.globalAlpha = opacity;
-              ctx.strokeStyle = "white";
+              ctx.strokeStyle = foreground;
               ctx.lineWidth = 1;
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);

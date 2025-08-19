@@ -30,11 +30,11 @@ export function Navigation() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300 ${isScrolled ? "bg-background/80" : "bg-background/50"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300 ${isScrolled ? "bg-background/90" : "bg-background/60"}`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-gradient">
-              Alex Johnson
+            <div className="text-2xl md:text-3xl font-extrabold tracking-tight">
+              <span className="text-gradient drop-shadow">Dhruv Munjpara</span>
             </div>
             
             {!isMobile && (
@@ -45,7 +45,7 @@ export function Navigation() {
                     href={item.href}
                     className="nav-link hover:text-accent transition-colors"
                   >
-                    {item.label}
+                    <span className="font-medium">{item.label}</span>
                   </a>
                 ))}
               </div>

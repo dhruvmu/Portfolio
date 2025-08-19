@@ -15,7 +15,7 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center">
           <div className="text-3xl font-bold mb-4 text-gradient">
-            Alex Johnson
+            Dhruv Munjpara
           </div>
           <p className="text-lg mb-6 opacity-80">
             Building digital experiences that matter
@@ -33,7 +33,7 @@ export function Footer() {
             ))}
           </div>
           <p className="opacity-60">
-            © {currentYear} Alex Johnson. All rights reserved.
+            © {currentYear} Dhruv Munjpara. All rights reserved.
           </p>
         </div>
       </div>

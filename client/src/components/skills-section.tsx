@@ -22,7 +22,7 @@ export function SkillsSection() {
         { name: "Node.js", level: 85 },
         { name: "Express.js", level: 80 },
         { name: "MongoDB", level: 75 },
-        { name: "REST APIs", level: 85 },
+        
       ],
     },
     {
@@ -31,8 +31,7 @@ export function SkillsSection() {
       skills: [
         { name: "Git/GitHub", level: 90 },
         { name: "VS Code", level: 95 },
-        { name: "Postman", level: 85 },
-        { name: "Figma", level: 70 },
+        
       ],
     },
   ];
@@ -74,14 +73,14 @@ export function SkillsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch grid-equal-rows">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="glass-card p-8 rounded-3xl">
+            <div key={categoryIndex} className="glass-card p-8 rounded-3xl h-full flex flex-col">
               <div className="text-center mb-6">
                 <category.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-2xl font-bold">{category.title}</h3>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4 flex-1">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="skill-item">
                     <div className="flex justify-between mb-2">

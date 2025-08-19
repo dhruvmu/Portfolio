@@ -1,5 +1,7 @@
 import { ExternalLink, Github, ShoppingCart, CheckSquare, Cloud, Share2, BookOpen, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FaUtensils } from "react-icons/fa";
+
 
 export function ProjectsSection() {
   const projects = [
@@ -13,13 +15,13 @@ export function ProjectsSection() {
       codeLink: "#",
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration, and project tracking features.",
-      icon: CheckSquare,
+      title: "Krishna kathiyaaawadi Restaurant",
+      description: "A restaurant website showcasing menu items, image gallery, and hotel details with interactive UI using HTML, CSS, and JavaScript.",
+      icon: FaUtensils,
       gradient: "from-green-500 to-teal-600",
-      techStack: ["React", "Express", "Socket.io", "MongoDB"],
-      demoLink: "#",
-      codeLink: "#",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      demoLink: "https://krishnakathiyawadi-git-main-dhruv-munjparas-projects.vercel.app/",
+      codeLink: "https://github.com/dhruvmu/Restaurant_Website/tree/main/krishna%20kathiyawadi%20hotel",
     },
     {
       title: "Weather Dashboard",
@@ -88,10 +90,10 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch grid-equal-rows">
           {projects.map((project, index) => (
-            <div key={index} className="project-card glass-card p-6 rounded-3xl">
-              <div className={`mb-6 h-48 bg-gradient-to-br ${project.gradient} rounded-2xl flex items-center justify-center`}>
+            <div key={index} className="project-card glass-card p-6 rounded-3xl h-full flex flex-col">
+              <div className={`mb-6 h-44 md:h-48 bg-gradient-to-br ${project.gradient} rounded-2xl flex items-center justify-center`}>
                 <project.icon className="h-16 w-16 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3">{project.title}</h3>
@@ -108,7 +110,7 @@ export function ProjectsSection() {
                   </span>
                 ))}
               </div>
-              <div className="flex space-x-3">
+              <div className="mt-auto flex space-x-3">
                 <Button
                   size="sm"
                   className="flex-1 btn-gradient text-white hover:opacity-90"
